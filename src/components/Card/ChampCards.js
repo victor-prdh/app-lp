@@ -1,11 +1,7 @@
 import { Image, Text, TouchableOpacity } from "react-native";
 import { StyleSheet } from "react-native";
 
-
-
-
 export function ChampCards({ champion }) {
-    console.log(champion.image);
     return (
         <TouchableOpacity style={style.card}>
             <Image source={{ uri: champion.image }}
