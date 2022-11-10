@@ -7,7 +7,7 @@ import Style from "../Style";
 export function HomeScreen() {
     const [champions, setChampions] = useState(null)
 
-    useEffect(async () => {
+    useEffect(() => {
         fecthAllChamps().then(res => setChampions(res))
     }, [])
 
