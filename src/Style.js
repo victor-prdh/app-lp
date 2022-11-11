@@ -11,11 +11,6 @@ export default StyleSheet.create({
         justifyContent: "space-around",
         padding: 10
     },
-    title: {
-        color: '#FFF',
-        fontWeight: 'bold',
-        fontSize: 38
-    },
     subTitle: {
         color: '#d0a85c',
         fontSize: 24,

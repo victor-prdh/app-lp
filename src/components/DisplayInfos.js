@@ -2,6 +2,8 @@ import React from "react";
 import { ActivityIndicator, SafeAreaView, Text, Image, View, ScrollView } from "react-native";
 import { StyleSheet } from "react-native";
 import Style from "../Style";
+import { Title } from "./Text/Title";
+
 
 export function DisplayInfos({ champion }) {
 
@@ -16,7 +18,7 @@ export function DisplayInfos({ champion }) {
             <Image source={{ uri: champion.banner }}
                 style={{ width: '100%', aspectRatio: 16 / 9 }} />
             <ScrollView style={{ padding: 10 }}>
-                <Text style={Style.title}>{champion.name}</Text>
+                <Title title={champion.name} />
                 <Text style={Style.subTitle}>{champion.title}</Text>
                 <View style={style.descriptionBox}>
                     <Text style={style.description}>
