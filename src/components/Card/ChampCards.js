@@ -1,6 +1,7 @@
-import { Image, Text, TouchableOpacity } from "react-native";
+import { Image, Text, TouchableOpacity, View } from "react-native";
 import { StyleSheet } from "react-native";
 import { useNavigation } from '@react-navigation/native';
+import { Title } from "../Text/Title";
 
 export function ChampCards({ champion }) {
     champion.banner = 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/'.concat(champion.id).concat('_0.jpg')
@@ -13,7 +14,9 @@ export function ChampCards({ champion }) {
             <Image source={{ uri: champion.banner }}
                 style={style.bgImage}
             />
-            <Text style={style.title} >{champion.name}</Text>
+            <View style={style.titleContainer} >
+                <Title title={champion.name} />
+            </View>
 
         </TouchableOpacity>
     )
@@ -34,16 +37,12 @@ const style = StyleSheet.create({
         position: 'absolute',
         aspectRatio: 1 / 1
     },
-    title: {
+    titleContainer: {
         backgroundColor: "#061c25",
         position: 'absolute',
-        color: '#FFF',
         width: '100%',
-        fontWeight: 'bold',
-        alignSelf: 'center',
         bottom: 0,
         paddingVertical: "1%",
         paddingHorizontal: '3%',
-        fontSize: 34
     }
 });
