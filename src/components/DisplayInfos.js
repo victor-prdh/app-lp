@@ -1,7 +1,7 @@
 import React from "react";
-import { ActivityIndicator, SafeAreaView, Text, Image, View, ScrollView } from "react-native";
-import { StyleSheet } from "react-native";
+import { Text, Image, View, ScrollView } from "react-native";
 import Style from "../Style";
+import { DescCard } from "./Card/DescCard";
 import { Title } from "./Text/Title";
 
 
@@ -20,30 +20,10 @@ export function DisplayInfos({ champion }) {
             <ScrollView style={{ padding: 10 }}>
                 <Title title={champion.name} />
                 <Text style={Style.subTitle}>{champion.title}</Text>
-                <View style={style.descriptionBox}>
-                    <Text style={style.description}>
-                        {champion.lore}
-                    </Text>
-                </View>
+                <DescCard lore={champion.lore} />
             </ScrollView>
 
 
         </View>
     )
 }
-
-
-const style = StyleSheet.create({
-    descriptionBox: {
-        marginVertical: 25,
-        paddingVertical: 10,
-        paddingHorizontal: 15,
-        borderColor: '#ffffff33',
-        borderWidth: 2
-    },
-    description: {
-        color: '#FFF',
-        fontSize: 15,
-        textAlign: 'justify',
-    }
-});
