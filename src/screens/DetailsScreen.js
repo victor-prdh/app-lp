@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import { ActivityIndicator, SafeAreaView, Text, TouchableOpacity } from "react-native";
+import { ActivityIndicator, SafeAreaView, TouchableOpacity } from "react-native";
 import { fetchOne } from "../helper/FetchLol";
 import { StyleSheet } from "react-native";
-import Ionicons from '@expo/vector-icons/Ionicons';
 import Style from "../Style";
+import Ionicons from '@expo/vector-icons/Ionicons';
 import { useNavigation } from '@react-navigation/native';
 import { DisplayInfos } from "../components/DisplayInfos";
+import { StatusBar } from "expo-status-bar";
 
 export function DetailScreen(nav) {
     const navigation = useNavigation()
@@ -16,7 +17,8 @@ export function DetailScreen(nav) {
     }, [])
 
     return (
-        <SafeAreaView style={style.container}>
+        <SafeAreaView style={{ ...Style.container, backgroundColor: '#061c25' }}>
+            <StatusBar style="light" />
             <TouchableOpacity onPress={() => navigation.goBack()}
                 style={style.backPopup}
             >
