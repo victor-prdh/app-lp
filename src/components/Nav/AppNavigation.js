@@ -13,7 +13,7 @@ export default function AppNavigation() {
     return (
         <NavigationContainer>
             <StatusBar style="auto" />
-            <Tab.Navigator>
+            <Tab.Navigator screenOptions={() => ({tabBarShowLabel: false})}>
                 <Tab.Screen name="HomeStack" component={HomeStack}
                     options={{
                         tabBarLabel: 'Home',
