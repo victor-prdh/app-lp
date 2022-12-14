@@ -1,4 +1,5 @@
 import { SafeAreaView, Text } from "react-native";
+import Header from "../components/Header";
 import Style from "../Style";
 
 export function SettingsScreen() {

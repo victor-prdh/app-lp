@@ -15,5 +15,10 @@ export default StyleSheet.create({
     subTitle: {
         color: Colors.textLight,
         fontSize: 24,
+    }, 
+    header: {
+        padding: 12,
+        width: "100%",
+        minHeight: "10%",
     }
 });
