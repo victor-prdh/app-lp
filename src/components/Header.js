@@ -6,6 +6,7 @@ export default function Header({children, title}) {
     return (
     <View style={Style.header}>
         <Title title={title} />
+        {children}
     </View>
     )
 }
