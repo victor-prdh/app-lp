@@ -1,7 +1,7 @@
 import { Text, StyleSheet } from "react-native";
 import { useFonts } from 'expo-font';
 
-export function Title({ title }) {
+export function Title({ title, children, additionalStyle }) {
     const [loaded] = useFonts({
         Beaufort: require('../../../assets/fonts/Beaufort-Bold.ttf'),
     });
@@ -11,7 +11,7 @@ export function Title({ title }) {
     }
 
     return (
-        <Text style={style.title}>{title}</Text>
+        <Text style={{...style.title, ...additionalStyle}}>{title} {children}</Text>
     )
 }
 
