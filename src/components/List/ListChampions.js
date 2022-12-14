@@ -32,7 +32,7 @@ export function ListChampions({ champions }) {
                     : 
                         <View style={{width: '100%', height: '100%', justifyContent: 'center'}}>
                             <Image source={require('../../../assets/not-found.png')} style={{maxWidth: '80%', height: 360, alignSelf: 'center', resizeMode: 'cover'}} />
-                            <Title additionalStyle={{color: 'black', textAlign: 'center'}}>Aucun champion aimé</Title>
+                            <Title additionalStyle={{color: 'black', textAlign: 'center'}}>Aucun champion trouvé</Title>
                         </View>
             }
         </>
