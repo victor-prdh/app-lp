@@ -4,6 +4,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { SettingsScreen } from '../../screens/SettingsScreen';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import HomeStack from './HomeStack';
+import { LikedChampScreen } from '../../screens/LikedChampScreen';
+import LikedStack from './LikedStack';
 
 
 export default function AppNavigation() {
@@ -20,6 +22,16 @@ export default function AppNavigation() {
                         headerShown: false,
                         tabBarIcon: ({ color, size }) => (
                             <Ionicons name="home" color={color} size={size} />
+                        )
+                    }}
+                />
+
+                <Tab.Screen name="LikedChamp" component={LikedStack}
+                    options={{
+                        tabBarLabel: 'LikedChamp',
+                        headerShown: false,
+                        tabBarIcon: ({ color, size }) => (
+                            <Ionicons name="heart" color={color} size={size} />
                         )
                     }}
                 />
