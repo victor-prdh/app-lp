@@ -1,5 +1,6 @@
 import { Text, StyleSheet, View } from "react-native";
 import { useFonts } from 'expo-font';
+import { Colors } from "../../helper/Colors";
 
 export function DescCard({ lore }) {
     const [loaded] = useFonts({
@@ -24,11 +25,11 @@ const style = StyleSheet.create({
         marginVertical: 25,
         paddingVertical: 10,
         paddingHorizontal: 15,
-        borderColor: '#ffffff33',
-        borderWidth: 2
+        backgroundColor: Colors.backgroundLight,
+        borderRadius: 12
     },
     description: {
-        color: '#FFF',
+        color: Colors.textLight,
         fontSize: 15,
         textAlign: 'justify',
     }

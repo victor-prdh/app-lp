@@ -2,6 +2,7 @@ import { Image, Text, TouchableOpacity, View } from "react-native";
 import { StyleSheet } from "react-native";
 import { useNavigation } from '@react-navigation/native';
 import { Title } from "../Text/Title";
+import { Colors } from "../../helper/Colors";
 
 export function ChampCards({ champion }) {
     champion.banner = 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/'.concat(champion.id).concat('_0.jpg')
@@ -35,14 +36,17 @@ const style = StyleSheet.create({
         height: '100%',
         width: '100%',
         position: 'absolute',
-        aspectRatio: 1 / 1
+        aspectRatio: 1 / 1,
+        borderRadius: 12
     },
     titleContainer: {
-        backgroundColor: "#061c25",
+        backgroundColor: Colors.backgroundLight,
         position: 'absolute',
         width: '100%',
         bottom: 0,
         paddingVertical: "1%",
         paddingHorizontal: '3%',
+        borderBottomLeftRadius: 12,
+        borderBottomRightRadius: 12
     }
 });

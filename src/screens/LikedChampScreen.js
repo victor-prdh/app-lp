@@ -3,8 +3,8 @@ import { ActivityIndicator, SafeAreaView, Text } from "react-native";
 import { ListChampions } from "../components/List/ListChampions";
 import { getLikedChamps } from "../helper/Store";
 import { useIsFocused } from "@react-navigation/native";
-import { StatusBar } from 'expo-status-bar';
-
+import Style from "../Style";
+import Header from "../components/Header";
 
 
 export function LikedChampScreen() {
@@ -17,8 +17,8 @@ export function LikedChampScreen() {
     }, [isFocused])
 
     return (
-        <SafeAreaView>
-            <StatusBar style="dark" />
+        <SafeAreaView style={Style.container}>
+            <Header title={"Champions favoris"}/>
            {champions ? (
                 <ListChampions champions={champions} fromLiked={true}></ListChampions>
             ) : (

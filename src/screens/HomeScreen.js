@@ -3,6 +3,7 @@ import { ActivityIndicator, SafeAreaView, Text } from "react-native";
 import { fecthAllChamps } from "../helper/FetchLol";
 import { ListChampions } from "../components/List/ListChampions";
 import Style from "../Style";
+import Header from "../components/Header";
 
 export function HomeScreen() {
     const [champions, setChampions] = useState(null)
@@ -13,6 +14,7 @@ export function HomeScreen() {
 
     return (
         <SafeAreaView style={Style.container}>
+            <Header title={"Tous les champions"} />
             {champions ? (
                 <ListChampions champions={champions}></ListChampions>
             ) : (

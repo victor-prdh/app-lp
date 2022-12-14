@@ -33,7 +33,6 @@ export async function storeLikedChamp(champ) {
 export async function getLikedChamps() {
     try {
         const jsonValue = await AsyncStorage.getItem('@likedChamp')
-        console.log(jsonValue);
         return jsonValue != null ? JSON.parse(jsonValue) : null;
     } catch (e) {
         Alert('Erreur lors du stockage')
@@ -46,7 +45,6 @@ export async function isLikedChamp(champ) {
             return false
         }
         const jsonValue = await AsyncStorage.getItem('@likedChamp')
-        console.log(jsonValue);
         var champions = jsonValue != null ? JSON.parse(jsonValue) : null;
         if (champions === null) {
             return false
