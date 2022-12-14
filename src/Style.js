@@ -1,8 +1,9 @@
 import { StyleSheet } from "react-native";
+import { Colors } from "./helper/Colors";
 
 export default StyleSheet.create({
     container: {
-        backgroundColor: '#fff',
+        backgroundColor: Colors.background,
         flex: 1,
         justifyContent: "center"
     },
@@ -12,7 +13,7 @@ export default StyleSheet.create({
         padding: 10
     },
     subTitle: {
-        color: '#d0a85c',
+        color: Colors.textLight,
         fontSize: 24,
     }
 });

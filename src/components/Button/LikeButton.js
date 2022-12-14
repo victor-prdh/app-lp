@@ -3,6 +3,8 @@ import { StyleSheet } from "react-native";
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { isLikedChamp, storeLikedChamp } from "../../helper/Store";
 import { useEffect, useState } from "react";
+import { Colors } from "../../helper/Colors";
+
 
 export function LikeButton({ champion }) {
 
@@ -21,7 +23,7 @@ export function LikeButton({ champion }) {
             })}}
             activeOpacity={0.8}
         >
-            <Ionicons name="heart" color={isLiked ? 'red' : 'white'} size={38} />
+            <Ionicons name="heart" color={isLiked ? Colors.red : Colors.grey} size={38} />
 
         </TouchableOpacity>
     )

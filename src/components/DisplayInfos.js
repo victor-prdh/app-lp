@@ -1,5 +1,6 @@
 import React from "react";
 import { Text, Image, View, ScrollView } from "react-native";
+import { Colors } from "../helper/Colors";
 import Style from "../Style";
 import { LikeButton } from "./Button/LikeButton";
 import { DescCard } from "./Card/DescCard";
@@ -14,7 +15,7 @@ export function DisplayInfos({ champion }) {
     }
 
     return (
-        <View style={{ width: '100%', height: '100%', backgroundColor: "#061c25" }}>
+        <View style={{ width: '100%', height: '100%'}}>
             <Image source={{ uri: champion.banner }}
                 style={{ width: '100%', aspectRatio: 16 / 9 }} />
             <ScrollView style={{ padding: 10 }}>
