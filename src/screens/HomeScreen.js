@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ActivityIndicator, SafeAreaView, Text } from "react-native";
+import { ActivityIndicator, SafeAreaView, Text, View } from "react-native";
 import { fecthAllChamps } from "../helper/FetchLol";
 import { ListChampions } from "../components/List/ListChampions";
 import Style from "../Style";
@@ -18,14 +18,18 @@ export function HomeScreen() {
 
     return (
         <SafeAreaView style={Style.container}>
-            <Header title={"Tous les champions"}> 
-                <Search set={setChampions} allChampions={allChampions}/>
-            </Header>
-            {champions ? (
-                <ListChampions champions={champions}></ListChampions>
-            ) : (
-                <ActivityIndicator size={"large"} />
-            )}
+            <View style={{height: "14%"}}>
+                <Header title={"Liste des champions"}> 
+                    <Search set={setChampions} allChampions={allChampions}/>
+                </Header>
+            </View>
+            <View style={{height: "86%"}}>
+                {champions ? (
+                    <ListChampions champions={champions}></ListChampions>
+                ) : (
+                    <ActivityIndicator size={"large"} />
+                )}
+            </View>
         </SafeAreaView>
     )
 }

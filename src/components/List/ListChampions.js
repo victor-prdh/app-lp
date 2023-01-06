@@ -1,4 +1,5 @@
 import { FlatList, Image, Text, View } from "react-native";
+import Style from "../../Style";
 import { ChampCards } from "../Card/ChampCards";
 import { Title } from "../Text/Title";
 
@@ -32,7 +33,7 @@ export function ListChampions({ champions }) {
                     : 
                         <View style={{width: '100%', height: '100%', justifyContent: 'center'}}>
                             <Image source={require('../../../assets/not-found.png')} style={{maxWidth: '80%', height: 360, alignSelf: 'center', resizeMode: 'cover'}} />
-                            <Title additionalStyle={{color: 'black', textAlign: 'center'}}>Aucun champion trouvé</Title>
+                            <Title additionalStyle={{textAlign: 'center'}}>Aucun champion trouvé</Title>
                         </View>
             }
         </>
