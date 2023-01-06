@@ -1,19 +1,20 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { DetailScreen } from '../../screens/DetailsScreen';
 import { HomeScreen } from '../../screens/HomeScreen';
+import { LikedChampScreen } from '../../screens/LikedChampScreen';
 
 
 
 const Stack = createNativeStackNavigator();
 
-const HomeStack = () => {
+const LikedStack = () => {
 
     return (
-        <Stack.Navigator initialRouteName='Home'>
-            <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
+        <Stack.Navigator initialRouteName='Liked'>
+            <Stack.Screen name="Liked" component={LikedChampScreen} options={{ headerShown: false }} />
             <Stack.Screen name="Details" component={DetailScreen} options={{ headerShown: false }} />
         </Stack.Navigator>
     );
 };
 
-export default HomeStack;
+export default LikedStack;

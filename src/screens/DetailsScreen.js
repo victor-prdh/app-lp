@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
-import { ActivityIndicator, SafeAreaView, Text, TouchableOpacity } from "react-native";
+import { ActivityIndicator, SafeAreaView, TouchableOpacity } from "react-native";
 import { fetchOne } from "../helper/FetchLol";
 import { StyleSheet } from "react-native";
-import Ionicons from '@expo/vector-icons/Ionicons';
 import Style from "../Style";
+import Ionicons from '@expo/vector-icons/Ionicons';
 import { useNavigation } from '@react-navigation/native';
 import { DisplayInfos } from "../components/DisplayInfos";
+import { StatusBar } from "expo-status-bar";
+import { Colors } from "../helper/Colors";
 
 export function DetailScreen(nav) {
     const navigation = useNavigation()
@@ -16,11 +18,11 @@ export function DetailScreen(nav) {
     }, [])
 
     return (
-        <SafeAreaView style={style.container}>
+        <SafeAreaView style={Style.container}>
             <TouchableOpacity onPress={() => navigation.goBack()}
                 style={style.backPopup}
             >
-                <Ionicons name="arrow-back" color="#061c25" size="30" />
+                <Ionicons name="arrow-back" color={Colors.textLight} size="30" />
             </TouchableOpacity>
             {champion ? (
                 <DisplayInfos champion={champion} />
@@ -40,7 +42,7 @@ const style = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: '50%',
-        backgroundColor: '#FFFFFFBB',
+        backgroundColor: Colors.backgroundLight,
         position: 'absolute',
         top: '10%',
         left: '5%'
