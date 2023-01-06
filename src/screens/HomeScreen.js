@@ -5,6 +5,7 @@ import { ListChampions } from "../components/List/ListChampions";
 import Style from "../Style";
 import Header from "../components/Header";
 import Search from "../components/Search/Search";
+import { Colors } from "../helper/Colors";
 
 export function HomeScreen() {
     const [champions, setChampions] = useState(null)
@@ -18,7 +19,7 @@ export function HomeScreen() {
 
     return (
         <SafeAreaView style={Style.container}>
-            <View style={{height: "14%"}}>
+            <View style={{height: "16%", backgroundColor: Colors.background, zIndex: 100}}>
                 <Header title={"Liste des champions"}> 
                     <Search set={setChampions} allChampions={allChampions}/>
                 </Header>

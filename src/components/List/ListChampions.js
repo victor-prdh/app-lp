@@ -31,7 +31,7 @@ export function ListChampions({ champions }) {
                         numColumns={1}
                     />
                     : 
-                        <View style={{width: '100%', height: '100%', justifyContent: 'center'}}>
+                        <View style={{width: '100%', height: '90%', justifyContent: 'center'}}>
                             <Image source={require('../../../assets/not-found.png')} style={{maxWidth: '80%', height: 360, alignSelf: 'center', resizeMode: 'cover'}} />
                             <Title additionalStyle={{textAlign: 'center'}}>Aucun champion trouvé</Title>
                         </View>

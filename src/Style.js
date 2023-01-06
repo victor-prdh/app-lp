@@ -5,7 +5,8 @@ export default StyleSheet.create({
     container: {
         backgroundColor: Colors.background,
         flex: 1,
-        justifyContent: "center"
+        justifyContent: "center",
+        minHeight: '100%'
     },
     horizontal: {
         flexDirection: "row",
